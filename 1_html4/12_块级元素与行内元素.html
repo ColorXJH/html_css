@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>块级元素与行内元素</title>
+</head>
+<body>
+    <!-- shift+alt+向上/向下：表示把光标当前行向下，向上复制一行 -->
+    <!-- 块级元素 独占一行 -->
+    <marquee>ColorXJH</marquee>
+    <marquee>ColorXJH</marquee>
+    <h1>ColorXJH</h1>
+    <h1>ColorXJH</h1>
+    <P>ColorXJH</P><P>ColorXJH</P>
+    <div>ColorXJH</div>
+    <div>ColorXJH</div>
+    <!-- 行内元素 挨个排序-->
+    <input type="text"/><input type="text"/>
+    <span>12</span>
+    <span>23</span>
+    <!-- 规则1：块级元素中能写：行内元素，块级元素，几乎什么都能写 -->
+    <div>
+        <div></div>
+        <span></span>
+        <p></p>
+        <input type="text">
+    </div>
+    <!-- 规则2：行内元素能写：行内元素，但不能写块级元素 -->
+    <span>
+        <span>xjh1</span>
+        <input type="text"/>
+        <!-- 下面的块级元素可能会导致整体错乱，比如第一个span显示包含了下面的xjh3
+        运用到后面就是常常说的css乱，但是究其原因还是因为写的html格式不规范，
+        不能在行内元素内写块级元素 -->
+        <p>xjh2</p>
+    </span>
+    <span>xjh3</span>
+    <!-- 规则3：h1-h6不能嵌套，否则会被挤出当前块 -->
+    <h3>h3
+        <h4>h4</h4>
+    </h3>
+    <!-- 规则4：p标签中不能写块元素，会挤出，并在后面多加一个p标签快 -->
+    <p>xiix,<h3>h3</h3></p>
+    <!-- p里面可以写marquee(块级元素)，是应为marquee是已经被废除的元素，不推荐使用了 --> 
+</body>
+</html>
