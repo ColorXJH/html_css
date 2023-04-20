@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>相对路径与绝对路径</title>
+</head>
+<body>
+    <!-- 1,2等价 1是简写 ./代表当前路径 -->
+    <img src="a/喜羊羊.jpg">
+    <img src="./a/喜羊羊.jpg">
+    <!-- 3,4,5，6等价，三是简写 ./代表当前路径  /代表根目录 ../代表上一级路径 -->
+    <img src="./怪兽.jpg">
+    <img src="怪兽.jpg">
+    <img src="/1_html4/path_test/怪兽.jpg">
+    <img src="../path_test/怪兽.jpg">
+    <!-- 相对路径，相对于当前位置./  绝对路径不依赖当前位置 /,分为本地绝对路径，网络绝对路径 -->
+    <!-- liveserver禁止使用这种方式（更换了设备就不起效了），如果想起效，需要本地打开，脱离编辑器 -->
+    <img src="E:/360极速浏览器/SF/资料/图片/喜羊羊.jpg">
+    <img width="450" src="http://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/5987cb68889c46949b87551fd9028186~tplv-tt-origin.jpeg?_iz=92253&from=wenda&x-expires=1684554889&x-signature=T2s%2FMjEgEOut%2Bubd090DnffkZj8%3D">
+    若服务器开启了防盗链，则不允许别人使用图片，会造成引用失败
+</body>
+</html>
