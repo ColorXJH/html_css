@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>超链接_跳转页面</title>
+</head>
+<body>
+    <!-- _blank在新的页签中打开，_self在当前页签打开，默认_self -->
+    <a href="https://miaosha.jd.com" target="_self">去jd秒杀</a>
+    <!-- 代码中的多个回车被浏览器当作一个空格解释，所以两个超链接间有一个空格，
+    代码中一行内的多个空格会被解析成一个空格，所以敲多少个空格在浏览器上显示的效果其实是一样的，
+    原因是第一个空格被理解为空格，其他的被理解为代码缩进了，失效了 -->
+    <a href="https://www.baidu.com" target="_blank">去百度</a>
+    <a href="./10_HTML排版标签.html">去排版标签</a>
+    <!-- 可以包裹除了自身的任意元素，不然会被扔出去 -->
+    <a href="./10_HTML排版标签.html">
+        <img src="./奥特曼.jpg" alt="奥特曼">
+    </a>
+</body>
+</html>
