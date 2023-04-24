@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>表单常用控件</title>
+</head>
+<body>
+    <form action="https://www.baidu.com/s">
+        <input type="text" name="wd">
+        <button>去搜索</button>
+    </form>
+    <hr>
+    <form action="https://search.jd.com/search" target="_blank">
+        <input type="text" name="keyword">
+        <button>去jd</button>
+    </form>
+    <hr>
+    <!-- 不写方法默认get 不写action默认当前请求路径 -->
+    <!-- 127.0.0.1:5500/1_html4/27_表单_基本结构.html?account=张三&pwd=1234 -->
+    <form>
+        <!-- 文本框 -->
+        账户：<input type="text" name="account" value="张三" maxlength="10"><br>
+        密码：<input type="password" name="pwd" maxlength="6"><br>
+        <!-- 单选框 -->
+        性别：
+            <!-- 不写value 会导致值为on -->
+            <input type="radio" name="gender" value="male" checked>男<br>
+            <input type="radio" name="gender" value="female">女<br>
+        <!-- 复选框 -->
+        爱好：
+            <!-- checked 默认勾选上 -->
+            <input type="checkbox" name="hobby" value="抽烟" checked>
+            <input type="checkbox" name="hobby" value="喝酒">
+            <input type="checkbox" name="hobby" value="烫头">
+        <!-- 文本域 -->
+        其他：
+        <textarea name="other"  cols="30" rows="10"></textarea>
+        籍贯：
+        <select name="place">
+            <option value="beijing">北京</option>
+            <!-- 默认选中 -->
+            <option value="shanghai" selected>上海</option>
+        </select>
+        <!-- 隐藏域 -->
+        <input type="hidden" name="abc" value="123">   
+        <!-- 确认按钮，第一种写法  type="submit" 类型默认提交-->
+        <button>确认</button>
+        <!-- 确认按钮，第二种写法 -->
+        <!-- <input type="submit" value="确认"> --> <br>
+        <!-- 重置按钮 第一种写法-->
+        <!-- <input type="reset" value="重置"> -->
+        <!-- 重置按钮 第二种写法-->
+        <button type="reset">重置</button>
+        <!-- 普通按钮1,表单不提交也不重置 -->
+        <!-- <button type="button">监测账户是否被注册</button> -->
+        <!-- 普通按钮2,表单不提交也不重置 -->
+        <input type="button" value="监测账户是否被注册">
+    </form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>框架标签</title>
+</head>
+<body>
+    <!-- 利用iframe嵌入一个网页 frameborder 边框0、1-->
+    <iframe src="https://www.bilibili.com" width="900" height="300" frameborder="0"></iframe>
+    <iframe src="https://www.taobao.com" width="900" height="300" frameborder="0"></iframe>
+    <!-- 可以打开电脑的设置中的剪切板历史记录，使用windows+v打开，然后选择粘贴 -->
+    <!-- 利用iframe嵌入其他内容 -->
+    <iframe src="resource/小电影.mp4" frameborder="0"></iframe>
+    <!-- 与超链接的target属性配合 -->
+    <a href="https://www.bilibili.com" target="bz">点我看b站</a>
+    <iframe name="bz" width="900" height="300" frameborder="0"></iframe>
+    <!-- 与表单的target配合使用 -->
+    <form action="https://so.toutiao.com/search" target="tt">
+        <input type="text" name="keyword">
+        <button>搜索</button>
+    </form>
+    <iframe name="tt" width="900" height="300" frameborder="0"></iframe>
+</body>
+</html>

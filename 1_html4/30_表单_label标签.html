@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>表单label标签</title>
+</head>
+<body>
+    <form action="https://www.baidu.com/s">
+        <input type="text" name="wd">
+        <button>去搜索</button>
+    </form>
+    <hr>
+    <form action="https://search.jd.com/search" target="_blank">
+        <input type="text" name="keyword">
+        <button>去jd</button>
+    </form>
+    <hr>
+
+    <form>
+        <!-- for 和id属性相对应 也可以不使用for属性，直接全部包裹 -->
+        <label for="zh">账户：</label><input id="zh" type="text" name="account" value="张三" maxlength="10"><br>
+        <label>密码：<input  type="password" name="pwd" maxlength="6"></label> <br>
+        性别：
+            <input id="nan" type="radio" name="gender" value="male" checked><label for="nan">男</label><br>
+            <label><input type="radio" name="gender" value="female">女</label><br>
+        爱好：
+            <label><input type="checkbox" name="hobby" value="抽烟"/>抽烟</label>
+            <label><input type="checkbox" name="hobby" value="喝酒"/>喝酒</label>
+            <label><input type="checkbox" name="hobby" value="烫头"/>烫头</label>
+        <label>其他：
+        <textarea name="other"  cols="30" rows="10"></textarea></label>
+        <label for="jg">籍贯：</label>
+        <select name="place"  id="jg">
+            <option value="beijing">北京</option>
+            <option value="shanghai" selected>上海</option>
+        </select>
+        <input type="hidden" name="abc" value="123">   
+        <!-- 一般来说不给按钮做关联，有事直接点按钮了 -->
+        <!-- <label for="qr">哈哈</label> -->
+        <button id="qr">确认</button>
+        <button type="reset">重置</button>
+        <input type="button" value="监测账户是否被注册">
+    </form>
+</body>
+</html>
