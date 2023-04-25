@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>样式表的优先级</title>
+    <link rel="stylesheet" href="../01_css的编写位置/position3.css">
+    <style>
+        h1{
+            color: blue;
+        }
+    </style>
+    <!-- 内部样式和外部样式优先级平级，但是行内样式优先级是最高的，如果只有内部样式和外部样式，相同的样式谁写在后面，谁生效
+    前面的会被后面的覆盖掉 ：后来者居上，同一个样式表中的优先级也是：后来者居上-->
+</head>
+<body>
+    <h1 style="color: red;">你好，欢迎来到我的世界</h1>
+</body>
+</html>
