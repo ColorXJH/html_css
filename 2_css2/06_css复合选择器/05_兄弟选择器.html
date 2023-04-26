@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>兄弟选择器</title>
+    <style>
+        /* div紧紧相邻得兄弟元素p  只往下看，不往上看(睡在下铺得兄弟) ---相邻兄弟选择器*/
+        /* div+p {
+            color:blue
+        } */
+        /* 选中div后所有得兄弟p元素，只往下看（睡在我下铺得所有兄弟）--通用兄弟选择器 */
+        div~p {
+            color: blueviolet;
+        }
+        /* 排除第一个 li+li 或者li~li都可以 */
+        li+li {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <p>Python</p>
+    <div>ColorXJH</div>
+    <p>JAVA</p>
+    <p>C</p>
+    <p>GO</p>
+    <p>C++</p>
+    <ul>
+        <li>主页</li>
+        <li>秒杀</li>
+        <li>抽奖</li>
+        <li>福利</li>
+    </ul>
+</body>
+</html>
