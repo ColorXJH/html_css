@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>结构伪类3</title>
+    <style>
+        /* 以下四个选择器都可以  last代表倒数 结构1*/
+        /* div>p:nth-of-type(5),
+        div>p:nth-child(6),
+        div>p:nth-last-child(3),
+        div>p:nth-last-of-type(2) {
+            color: red;
+        } */
+
+        /* 选中的是没有兄弟的span元素 结构2 */
+        /* span:only-child {
+            color: red;
+        } */
+
+        /* 选中的是没有同类型兄弟的span元素 结构2*/
+        /* span:only-of-type {
+            color:red;
+        } */
+
+        /* 以下任意一个表示选中的是html根元素==》html元素 */
+        /* :root,
+        html {
+            background-color: gray;
+        } */
+
+        /* 选中的是没有内容的div元素 结构3 */
+        div:empty {
+            width: 100px;
+            height: 100px;
+            color: blue;
+            background: gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- 结构1 -->
+    <!-- <div>
+        <span>测试1</span>
+        <p>张三：98分</p>
+        <p>李四：88分</p>
+        <p>王五：78分</p>
+        <p>赵六：68分</p>
+        <p>孙七：58分</p>
+        <p>老八：48分</p>
+        <span>测试2</span>
+    </div> -->
+
+    <!-- 结构2 -->
+    <!-- <div>
+        <span>测试1</span>
+    </div>
+    <div>
+        <span>测试2</span>
+        <p>张三：98分</p>
+        <p>李四：88分</p>
+        <p>王五：78分</p>
+        <p>赵六：68分</p>
+        <p>孙七：58分</p>
+        <p>老八：48分</p>
+    </div> -->
+
+    <!-- 结构3 -->
+    <div></div>
+    <!-- 下面的这个结构就不行，因为他里面有换行符，会被解析成一个空格   结构3 -->
+    <div>
+
+    </div>
+</body>
+</html>

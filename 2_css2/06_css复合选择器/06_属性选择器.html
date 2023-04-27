@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+    <style>
+        /* 第一种写法：选择具有title属性的元素 */
+        /* [title] {
+            color: red;
+        } */
+        /* 第二种写法：选择具有title属性且属性值为"color1"得元素 */
+        /* [title="color1"] {
+            color: red;
+        } */
+        /* 第三种写法 选择具有title属性的元素，并且属性值以C开头的元素*/
+        /* [title^="c"] {
+            color: red;
+        } */
+        /* 第四种写法 选择具有title属性的元素，并且以4结尾的元素 */
+        /* [title$="4"] {
+            color: red;
+        } */
+        /* 第5种写法，选择具有title属性的元素，并且包含字母o的元素 */
+        [title*="o"] {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div title="color1">Color1</div>
+    <div title="color2">Color2</div>
+    <div title="color3">Color3</div>
+    <div title="color4">Color4</div>
+</body>
+</html>

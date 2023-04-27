@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素选择器</title>
+    <style>
+        /* 一个冒号是伪类选择器，两个冒号是伪元素选择器 */
+        /* 选中的是div中的额第一个文字、字母、字符 */
+        /* 什么是伪元素？很像元素，但是不是元素（element），是元素中的一些特殊位置 */
+        /* div::first-letter {
+            color: red;
+            font-size: 40px;
+        } */
+
+        /* 选中的是div中的第一行文字 */
+        /* div::first-line {
+            color: green;
+        } */
+
+        /* 鼠标选中的文字背景色绿色,橙色文字 */
+        div::selection {
+            background-color: green;
+            color: orange;
+        }
+
+        /* 选中的是input元素中的提示的文字 */
+        input::placeholder {
+            color: skyblue;
+        }
+
+        /* 选中p元素内容的前开始和最后的位置，随后创建一个子元素 */
+        p::before {
+            content: "￥";
+        }
+        p::after {
+            content: ".00";
+        }
+
+        /* 注意： div::selection input::placeholder 属于css3提出的，其他的是css2提出的，css2没有严格区分伪类与伪元素的概念
+        到了css3严格区分了伪类与伪元素，所以css2的那些伪元素写一个冒号也是奏效的，但是最好按照最新标准写两个冒号*/
+    </style>
+</head>
+<body>
+    <!-- vscode中随机生成一段英文：lorem 或者限定单词lorem5：只展示5个单词  -->
+    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, architecto? Excepturi totam a magnam exercitationem consequatur iusto quo at delectus ratione iure dolor minus, architecto hic? Labore ab architecto ipsam.</div>
+    <br>
+    <input type="text" placeholder="请输入您的用户名">
+    <br>
+    <p>199</p>
+    <p>299</p>
+    <p>399</p>
+    <p>499</p>
+</body>
+</html>

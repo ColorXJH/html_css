@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器-语言伪类</title>
+    <style>
+        /* 选择语言为英文的div元素 */
+        div:lang(en) {
+            color: red;
+        }
+        /* 选择语言为简体中文的div元素 */
+        div:lang(zh-CN) {
+            color: green;
+        }
+        /* 选择语言为简体中文的所有元素 */
+        :lang(zh-CN) {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>夏天</div>
+    <div lang="en">ColorXJH</div>
+    <div lang="en">哈哈</div>
+    <p>前端</p>
+    <span>数据库</span>
+</body>
+</html>

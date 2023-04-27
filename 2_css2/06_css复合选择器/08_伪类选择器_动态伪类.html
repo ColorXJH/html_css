@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器——动态伪类</title>
+    <style>
+        /* link,visited是a元素独有的状态 */
+        a:link {
+            color: green;
+        }
+        a:visited {
+            color: gray;
+        }
+        /* 鼠标悬浮上时的a元素 */
+        a:hover {
+            color: blue;
+        }
+        /* 被激活状态下的a元素 （激活指的是鼠标按下去不抬起来） */
+        a:active {
+            color: orange;
+        }
+        span:hover {
+            color: green;
+        }
+        span:active {
+            color:yellow;
+        }
+        /* 获取焦点 只有表单元素（可以往里面输入东西，选择东西的元素）才能使用 */
+        input:focus,
+        select:focus {
+            color: blue;
+            background: yellow;
+        }
+        
+        /* 注意。以上四个伪类选择器要按照如上状态，不然有的可能不起作用：为什么？
+        点击分为三部 点击前 点击时 点击后
+        1:点击前为 link状态
+        2:点击前为 link hover状态
+        3:点击时为 link hover active状态 
+        根据伪类选择器css后来者居上的原则，最后在style种定义的  的状态必须是active,否则就没有该效果*/
+        /* 记住顺序 lvhv=>买了lv包包，haha大小，同时link和visited是a超链接独有的状态，其他元素不具备 */
+    </style>
+</head>
+<body>
+    <a href="https://www.baidu.com" >去京东</a>
+    <a href="https://www.jd.com" >去百度</a>
+    <span>Color</span>
+    <br>
+    <input type="text">
+    <br>
+    <input type="text">
+    <br>
+    <input type="text">
+    <br>
+    <select>
+        <option value="BJ">北京</option>
+        <option value="SH">上海</option>
+        <option value="GZ">广州</option>
+    </select>
+</body>
+</html>

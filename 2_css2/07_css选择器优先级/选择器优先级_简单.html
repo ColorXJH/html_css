@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器优先级_简单</title>
+    <style>
+        /* 行内>id选择器>类选择器>元素选择器>通配选择器 */
+        #xjh {
+            color: pink;
+        }
+        .slogan {
+            color: blue;
+        }
+        h2 {
+            color: red;
+        }
+        * {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="slogan" id="xjh" style="color:gray">你好，欢迎来到我的世界</h2>
+</body>
+</html>

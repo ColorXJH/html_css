@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器优先级——详细</title>
+    <style>
+        #test #xjh{
+            color:purple;
+        }
+        #xjh {
+            color: orange;
+        }
+        /* 同样选择一个元素 */
+        /* 优先级高 （a,b,c）=>(0,2,1)*/
+         .container span.slogan {
+            color: red;
+        } 
+        /* 优先级低 (a,b,c)=>(0,1,3) */
+        div>p>span:first-child {
+            color: pink;
+        }
+        /* 如果注释掉第3个，打开第5个，则因为4，5选择器的权重都是一样的(0，1，3)，则使用后来者居上原则 */
+        /* div>p>span:nth-child(1) {
+            color: blue;
+        } */
+        /* 为什么会出现上面的情况，其实每一个选择器我们都可以算出权重，总的权重高的，就会使用该选择器样式 */
+        /* 权重：（a,b,c）a代表id选择器个数，b代表类、伪类、属性 选择器个数，c代表元素、伪元素 选择器个数 */
+        /* 权重就是逐级比较，一旦当前位胜出，就不会比较后面的了，如果比较完三位权重都是一样的，则使用后来者居上原则 */
+        /* vscode 其实都帮我们把权重算好了，鼠标放在选择器上停留一会就会显示（a,b,c）数值 */
+        
+        /* !important最强的属性，行内属性都干不过它 */
+        .slogan {
+            color:brown !important
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="test">
+        <p>
+            <span class="slogan" id="xjh" style="color:blue;">你好，欢迎来到我的世界</span>
+            <span >color-xjh</span>
+        </p>
+    </div>
+</body>
+</html>
