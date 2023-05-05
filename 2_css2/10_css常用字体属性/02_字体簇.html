@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>字体簇</title>
+    <style>
+        .xjh1 {
+            font-size: 100px;
+            font-family: "微软雅黑";
+        }
+        .xjh2 {
+            font-size: 100px;
+            /* 依次查找，找到就用，没有就默认微软雅黑 */
+            /* 字体分为衬线字体与 非衬线字体 最好字体族都为一种字体分类，下面的楷体与其他三个不是一类 */
+            /* 衬线字体有棱角，顿感，非衬线字体是很平整的没有棱角的 */
+            font-family: "楷体","华文彩云","微软雅黑","宋体";
+        }
+        .xjh3 {
+            font-size: 100px;
+            font-family: "宋体";
+        }
+        .xjh4 {
+            font-size: 100px;
+            /* 字体需要书写在电脑上安装过的字体，也可以单独下载一个字体安装到电脑上，比如偏偏体.ttf,直接双击安装到电脑上*/
+            /* sans-serif代表当前面的字体都无效，系统都没安装时，使用系统里面安装过的非衬线类型的字体 */
+            /* serif 代表衬线字体，当前面衬线字体类型都无效时，使用系统的某一个衬线类型字体*/
+            font-family: "华文彩云", "宋体",sans-serif;
+        }
+        .xjh5 {
+            font-size: 100px;
+            /* 微软雅黑的英文 */
+            font-family: "Microsoft YaHei";
+        }
+    </style>
+</head>
+<body>
+    <div class="xjh1">colorxjh1</div>
+    <div class="xjh2">colorxjh2</div>
+    <div class="xjh3">colorxjh3</div>
+    <div class="xjh4">colorxjh4</div>
+    <div class="xjh5">colorxjh5</div>
+</body>
+</html>
