@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <title>行高注意事项</title>
     <style>
+        /* 默认大文字，小文字都是以 基线 对齐 */
         #d1 {
             font-size: 40px;
             background-color: skyblue;
+            /* 行高是可以继承的 */
             line-height: 1.667;
         }
+        /* line-height与height: 写了height，高度就是height，没写就是line-height乘以行数 */
+        /* 行高的应用场景：1:调整多行文字的间距 2:单行文字的垂直居中（设置和height相同的高度） */
     </style>
 </head>
 <body>
