@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子的内边距</title>
+    <style>
+        #d1 {
+            font-size: 20px;
+            width: 400px;
+            height: 400px;
+            /* 上 右 下 左*/
+            padding: 20px 10px 30px 5px;
+            background-color: skyblue;
+        }
+        span {
+            padding-top: 10px;
+            padding-bottom: 20px;
+            padding-left: 15px;
+            padding-right: 22px;
+            background-color: orange;
+        }
+        img {
+            padding: 25px;
+            width: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="d1">你好啊xjh</div>
+    <hr>
+    <!-- 对于行内元素，他的左右内边距是凑效的，但是上下内边距可能会无效，所以要慎用
+    对于块级元素，行内块级元素，都是没问题的，只要又块，代表可以设置其宽高各种盒模型的属性 -->
+    <span>你好啊</span>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ullam non dicta molestias, ipsa fugiat facere cupiditate consequatur nesciunt numquam vitae commodi ea asperiores quas, neque voluptate exercitationem explicabo nihil!</div>
+    <hr>
+    <img src="../../1_html4/resource/小姐姐.gif" alt="">
+</body>
+</html>

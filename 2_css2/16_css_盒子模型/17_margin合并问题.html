@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>margin合并问题</title>
+    <style>
+        /* 上面兄弟的下外边距和下面兄弟的上外边距会合并 */
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+        .test {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+        }
+        .box1 {
+            background-color: skyblue;
+            margin-bottom: 50px;
+        }
+        .box2 {
+            background-color: darkgray;
+            margin-top: 60px;  
+        }
+        .test1 {
+            background-color: purple;
+            margin-right: 50px;
+        }
+        .test2 {
+            background-color: pink;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <hr>
+    <div class="test test1">a</div><div class="test test2">b</div>
+</body>
+</html>

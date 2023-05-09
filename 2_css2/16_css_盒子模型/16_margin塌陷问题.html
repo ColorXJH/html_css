@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>margin塌陷问题</title>
+    <style>
+        /* margin塌陷问题是指：在一个父元素里面，给第一个子元素设置margin-top ,给最后一个子元素设置margin-bottom
+        这两个值都会被父元素抢走，导致样式不准，解决方案如下：
+        1：给父元素加上边框
+        2: 给父元素加上padding 
+        3: overflow:hidden*/
+        .outer {
+            width: 400px;
+            /* height: 400px; */
+            background-color: gray;
+            /* border:1px solid red; */
+            /* padding: 1px; */
+            /* 溢出之后的显示模式：影藏 */
+            overflow: hidden;
+        }
+        .inner1 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            /* 下面这行代码是有问题的 */
+            margin-top: 50px;
+        }
+        .inner2 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            /* 下面这行代码是有问题的 */
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner1">ineer1</div>
+        <div class="inner2">ineer2</div>
+    </div>
+    <div>我是一段测试文字</div>
+</body>
+</html>

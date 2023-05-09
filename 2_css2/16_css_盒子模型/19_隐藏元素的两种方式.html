@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>隐藏元素的两个方式</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+        .box1 {
+            background-color: skyblue;
+            /* 两种隐藏 display不占位置   visibility 占位 */
+            /* display: none; */
+            visibility: hidden;
+        }
+        .box2 {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+</body>
+</html>
