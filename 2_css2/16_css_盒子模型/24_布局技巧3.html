@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>布局技巧2</title>
+    <style>
+        .outer {
+            width: 400px;
+            height: 400px;
+            background-color: gray;
+            text-align: center;
+            line-height: 400px;
+            /* 消除继承带来的影响，一般字体都不是绝对居中，都是稍微往下靠一点 */
+            font-size: 0px;
+        }
+        img {
+           vertical-align: middle; 
+        }
+        span {
+            font-size: 40px;
+            vertical-align: middle;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+            <span>出来玩啊?</span><img src="../../1_html4/resource/悟空.jpg" alt="">
+    </div>
+</body>
+</html>

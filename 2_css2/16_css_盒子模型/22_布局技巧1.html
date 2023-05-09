@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>布局技巧1</title>
+    <style>
+        .outer {
+            width: 400px;
+            height: 400px;
+            background-color: gray;
+            /* 解决margin缺陷 */
+            overflow: hidden;
+        }
+        .inner {
+            width: 200px;
+            height: 100px;
+            /* 水平居中 */
+            margin:0 auto;
+            /* 垂直剧中 */
+            margin-top: 140px;
+            padding: 5px;
+            border: 5px solid red;
+            background-color: orange;
+            /* 内部文字垂直居中 */
+            line-height: 100px;
+            /* 文字水平居中 */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            inner
+        </div>
+    </div>
+</body>
+</html>
