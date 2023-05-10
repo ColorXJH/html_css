@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>05_解决浮动后的影响 </title>
+    <style>
+        .outer {
+            width: 500px;
+            background-color: gray;
+            border: 1px solid black;
+            /* 第一种解决方案：自己算高度 */
+            /* height: 122px; */
+
+            /* 第二种解决方案 */
+            /* float: left; */
+
+            /* 第三种解决方案 */
+            /* overflow: hidden; */
+
+            /* 第四种解决方案 */
+            /* <!-- 补上一个空的div --> */
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            border: 1px solid black;
+            margin: 10px;
+        }
+        .box1,.box2,.box3,.box4 {
+            float: left;
+        }
+        .mofa {
+            /* left:消除前面所有左浮动兄弟产生的影响,both:都*/
+            clear:both;
+        }
+        .outer::after {
+            content: '';
+            /* 伪元素加空，默认结构式inline行内，所以需要修改成：块 */
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <!-- 补上一个空的div -->
+        <!-- <div class="mofa"></div> -->
+    </div>
+    <div style="background-color: orange;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ab suscipit impedit ducimus similique omnis atque culpa ea amet sint autem ullam, eveniet dolorem nobis, perferendis vel quidem excepturi assumenda voluptatum dolore dolorum asperiores repellat? Iste rerum exercitationem ratione ducimus, iure quo modi magnam, dignissimos reprehenderit consectetur quisquam perspiciatis ipsam facere harum laboriosam ex, consequatur quidem enim cupiditate voluptatibus dolore. Velit cumque, voluptas facilis vitae incidunt illum eius corrupti explicabo, ipsam accusantium a quas quae placeat nemo commodi totam autem! Sequi debitis eos commodi mollitia nulla odit veritatis tenetur corporis dolores distinctio perspiciatis molestias minima, fugit ducimus nostrum, officia velit doloremque adipisci molestiae quibusdam. Tempora ea nam aperiam magnam beatae maiores amet atque voluptatem omnis delectus animi illum ullam provident sequi ad, quam sit distinctio consequuntur minima tenetur veritatis culpa consectetur! Dignissimos eum quae corrupti deserunt iusto exercitationem nihil inventore officiis necessitatibus consectetur odio, porro dolor animi harum quisquam mollitia vel omnis est quasi eveniet veniam optio quas! Placeat, esse praesentium! Totam, dicta eos deserunt accusamus, excepturi neque vitae laboriosam molestiae eaque fuga dolorem nulla consectetur obcaecati qui provident, nihil asperiores id facilis nisi minima explicabo? Ea voluptatibus reiciendis cum minus laborum at explicabo distinctio deserunt amet libero. Sint, dolorum?</div>
+</body>
+</html>
