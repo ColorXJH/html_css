@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动的小练习</title>
+    <style>
+        .outer {
+            width: 500px;
+            background-color: gray;
+            /* 放置第一个div的margin-top和最后一个div的margin-buttom被父元素抢走 */
+            border: 1px solid black
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            border: 1px solid black;
+            margin: 10px;
+        }
+        .box1 {
+            float: left;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+</body>
+</html>

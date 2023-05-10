@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>行内块的幽灵空白问题</title>
+    <style>
+        div {
+            width: 600px;
+            background-color: skyblue;
+            font-size: 0px;
+        }
+        img {
+            width: 100px;
+            /* 第一种方案：写什么都行，就是不能写baseline,然后top显示文字再上面，middle在中间，buttom在下面 */
+            /* vertical-align: buttom; */
+            /* 第二种解决方案，只有图片，没有文字 */
+            /* 将行内块元素编程块，独占一行 */
+            /* display: block; */
+            /* 第三种，将父类的字体设置为0，然后如果后面有字体，单独设置元素的字体大小 */
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="../../1_html4/resource/悟空.jpg" alt="悟空">
+        <!-- xg -->
+    </div>
+</body>
+</html>
