@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>定位得层级</title>
+    <style>
+        .outer {
+            width: 500px;
+            background-color: skyblue;
+            border: 1px solid black;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+        }
+        .box1 {
+            background-color: #888;
+        }
+        .box2 {
+            background-color: orange;
+            position: relative;
+            top: -150px;
+            left: 50px;
+            /* 默认auto 大概就是默认值0 */
+            z-index: 0;
+        }
+        .box3 {
+            background-color: green;
+            position: absolute;
+            top: 130px;
+            left: 130px;
+        }
+        .box4 {
+            background-color: red;
+            position: fixed;
+            top: 200px;
+            left: 200px;
+            z-index: 20;
+        }
+        .box5 {
+            background-color: purple;
+            position: fixed;
+            top:260px;
+            left:260px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <!-- 浮动得层级都是一样得，根据先后出现得顺序决定谁压着谁 -->
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+    </div>
+    <div class="box box5">5</div>
+</body>
+</html>

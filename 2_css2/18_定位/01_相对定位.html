@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>相对定位</title>
+    <style>
+        .outer {
+            width: 500px;
+            background-color: skyblue;
+            border: 1px solid black;
+            padding: 20px;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+        }
+        .box1 {
+            background-color: #888;
+        }
+        .box2 {
+            background-color: orange;
+            /* 开启相对定位：在包含块中（包含块为系统中有定位结构得，如果无则到html） */
+            position: relative;
+            /* 左右不能同时用，假设同时使用只有left会生效，
+            上下不能同时使用，同时使用只有上生效， 
+            相对定位，相对得是原来得位置 */
+            left: 100px;
+            right: 100px;
+            top:100px;
+            bottom: 100px;
+        }
+        .box3 {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+</body>
+</html>
