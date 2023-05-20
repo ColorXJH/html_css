@@ -1,4 +1,7 @@
-/* 顶部导航条start */
- 
+/* 基础设置-版心 */
+.container {
+    width: 1190px;
+    margin: 0 auto;
+}
 
-/* 顶部导航条end */
+
