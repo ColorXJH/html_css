@@ -173,18 +173,119 @@
     padding: 0 10px;
     border-left: 1px solid #666;
 }
+/* #endregion内容区左测导航end */
+
+/* #region内容区中start */
 .main-content .banaer {
     width: 690px;
     height: 458px;
     background-color: green;
     margin: 0 10px;
 }
+/* #endregion内容区中end */
+
+/* #region内容区右边start */
 .main-content .slide-other {
     width: 290px;
     height: 458px;
-    background-color: orange;
 }
-/* #endregion内容区左测导航end */
+.slide-other .message {
+        width: 260px;
+        height: 156px;
+        border: 1px solid #D9D9D9;
+        padding: 0 14px;
+}
+
+.message .title {
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 1px solid #D9D9D9;
+}
+.message .title span {
+    font-size: 14px;
+}
+.message .title a {
+    font-size: 12px;
+}
+.slide-other .msg-list li {
+    height: 26px;
+    line-height: 26px;
+}
+
+/* 右边图标文字 */
+.slide-other .other-nav {
+    width: 290px;
+    height: 290px;
+    margin-top: 10px;
+    /* background-color: #D9D9D9; */
+    /* 解决margin塌陷 */
+    overflow: hidden;
+}
+.other-nav-list li {
+    width: 48px;
+    height: 70px;
+    /* background-color: skyblue; */
+    float: left;
+    margin: 0 11px;
+    text-align: center;
+    /* 图表能点 */
+    cursor: pointer;
+}
+.other-nav-list li:first-child {
+    margin-left: 16px;
+}
+.other-nav-list:first-child {
+    margin-top: 16px;
+}
+.other-nav-list:nth-child(2) {
+    margin: 17px 0;
+}
+/* 精灵图及其使用功能 */
+.other-nav-list .picture {
+    width: 48px;
+    height: 48px;
+    background-image: url("../images/精灵图-侧边功能.png");
+}
+/* 第一行 */
+.other-nav-list:nth-child(1) li:nth-child(1) .picture {
+    background-position: 0 0;
+}
+.other-nav-list:nth-child(1) li:nth-child(2) .picture {
+    background-position: -48px 0;
+}
+.other-nav-list:nth-child(1) li:nth-child(3) .picture {
+    background-position: -96px 0;
+}
+.other-nav-list:nth-child(1) li:nth-child(4) .picture {
+    background-position: -144px 0;
+}
+/* 第二行 */
+.other-nav-list:nth-child(2) li:nth-child(1) .picture {
+    background-position: 0 -48px;
+}
+.other-nav-list:nth-child(2) li:nth-child(2) .picture {
+    background-position: -48px -48px;
+}
+.other-nav-list:nth-child(2) li:nth-child(3) .picture {
+    background-position: -96px -48px;
+}
+.other-nav-list:nth-child(2) li:nth-child(4) .picture {
+    background-position: -144px -48px;
+}
+/* 第三行 */
+.other-nav-list:nth-child(3) li:nth-child(1) .picture {
+    background-position: 0 -96px;
+}
+.other-nav-list:nth-child(3) li:nth-child(2) .picture {
+    background-position: -48px -96px;
+}
+.other-nav-list:nth-child(3) li:nth-child(3) .picture {
+    background-position: -96px -96px;
+}
+.other-nav-list:nth-child(3) li:nth-child(4) .picture {
+    background-position: -144px -96px;
+}
+/* #endregion内容区右边end */
 
 
 
