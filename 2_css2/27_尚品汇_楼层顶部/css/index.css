@@ -1,0 +1,399 @@
+/* 基础设置-版心 */
+.container {
+    width: 1190px;
+    margin: 0 auto;
+}
+/* #region顶部导航条start */
+.topbar {
+    height: 30px;
+    background-color: #ECECEC;
+} 
+.welcome {
+    height: 30px;
+    line-height: 30px;
+    color: #666;
+    /* 消除缝隙 */
+    font-size: 0px;
+}
+/* 重新定义字体大小 */
+.welcome span,.welcome a {
+    font-size: 12px;
+}
+.welcome .hello {
+    margin-right: 28px;
+}
+.welcome .login {
+    padding-right: 10px;
+    border-right: 1px solid #666;
+}
+.welcome .register {
+    padding-left: 10px;
+}
+.topbar-nav .list {
+    height: 30px;
+    line-height: 30px;
+}
+/* 列表浮动起来 */
+.topbar-nav .list li{
+    float: left;
+ }
+ /* 元素间距于竖线 */
+.topbar-nav .list li a {
+    border-right: 1px solid #666;
+    padding:0 15px ;
+}
+/* 清楚第一个和最后一个padding 最后一个border */
+.topbar-nav .list li:first-child a {
+    padding-left: 0;
+}
+.topbar-nav .list li:last-child a {
+    padding-right: 0;
+    border: 0;
+}
+/* #endregion顶部导航条end */
+
+
+/* #region头部start */
+.header {
+   height: 120px;
+   /* background-color: skyblue;  */
+}
+
+.header .search form {
+    margin-top: 42px;
+    font-size: 0px;
+    /* input  button 有自己的默认字体大小 */
+}
+.header .search input {
+    width: 508px;
+    height: 34px;
+    border: 1px solid #DD303D;
+}
+.header .search button {
+    width: 80px;
+    height: 36px;
+    background-color:#DD303D;
+    /* 解决基线对齐造成的button与input不齐 */
+    vertical-align: top;
+    /* 搜索背景图 */
+    background-image: url('../images/serch_icon.png');
+    /* 不让背景图重复 */
+    background-repeat: no-repeat;
+    /* 调整背景图的位置 水平 垂直 */
+    background-position: 28px 6px;
+}
+/* #endregion头部end */
+
+/* #region主导航start */
+.main-nav {
+    height: 48px;
+    border-bottom: 1px solid #DD303D ;
+}
+.main-nav .all-types {
+    width: 190px;
+    height: 48px;
+    background-color: #DD303D;
+    color: white;
+    text-align: center;
+    line-height: 48px;
+    font-size: 16px ;
+}
+.main-nav-list li {
+    float: left;
+    margin: 0 10px;
+    font-size: 16px;
+}
+.main-nav-list {
+    height: 48px;
+    line-height: 48px;
+}
+
+/* #endregion主导航end */
+
+/* #region内容区左测导航start */
+.main-content {
+    margin-top: 10px;
+}
+.main-content .slide-nav {
+    width: 190px;
+    height: 458px;
+    background-color: #F4F4F4;
+    /* 相对于爷爷定位 */
+    position: relative;
+}
+.main-content .slide-nav li {
+    font-size: 14px;
+    line-height: 28px;
+    height: 28px;
+    padding-left: 16px;
+    
+}
+.main-content .slide-nav li:hover {
+    background-color: red;
+    
+}
+.main-content .slide-nav li:hover>a {
+    color: white;
+}
+/* 放在这个元素上时才展示二级菜单 */
+.main-content .slide-nav li:hover .second-menu {
+    display: block;
+}
+.second-menu {
+    width: 680px;
+    height: 458px;
+    background-color: white;
+    position: absolute;
+    top:0;
+    left: 190px;
+    padding-left: 20px;
+    /* 默认不展示二级菜单 */
+    display: none;
+
+
+}
+.second-menu dl {
+    height: 36px;
+    line-height: 36px;
+}
+.second-menu dl:first-child {
+    margin-top: 10px;
+}
+.second-menu dt {
+    float: left;
+    width: 70px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.second-menu dd {
+    float: left;
+    
+}
+.second-menu dd a {
+    padding: 0 10px;
+    border-left: 1px solid #666;
+}
+/* #endregion内容区左测导航end */
+
+/* #region内容区中start */
+.main-content .banaer {
+    width: 690px;
+    height: 458px;
+    background-color: green;
+    margin: 0 10px;
+}
+/* #endregion内容区中end */
+
+/* #region内容区右边start */
+.main-content .slide-other {
+    width: 290px;
+    height: 458px;
+}
+.slide-other .message {
+        width: 260px;
+        height: 156px;
+        border: 1px solid #D9D9D9;
+        padding: 0 14px;
+}
+
+.message .title {
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 1px solid #D9D9D9;
+}
+.message .title span {
+    font-size: 14px;
+}
+.message .title a {
+    font-size: 12px;
+}
+.slide-other .msg-list li {
+    height: 26px;
+    line-height: 26px;
+}
+
+/* 右边图标文字 */
+.slide-other .other-nav {
+    width: 290px;
+    height: 290px;
+    margin-top: 10px;
+    /* background-color: #D9D9D9; */
+    /* 解决margin塌陷 */
+    overflow: hidden;
+}
+.other-nav-list li {
+    width: 48px;
+    height: 70px;
+    /* background-color: skyblue; */
+    float: left;
+    margin: 0 11px;
+    text-align: center;
+    /* 图表能点 */
+    cursor: pointer;
+}
+.other-nav-list li:first-child {
+    margin-left: 16px;
+}
+.other-nav-list:first-child {
+    margin-top: 16px;
+}
+.other-nav-list:nth-child(2) {
+    margin: 17px 0;
+}
+/* 精灵图及其使用功能 */
+.other-nav-list .picture {
+    width: 48px;
+    height: 48px;
+    background-image: url("../images/精灵图-侧边功能.png");
+}
+/* 第一行 */
+.other-nav-list:nth-child(1) li:nth-child(1) .picture {
+    background-position: 0 0;
+}
+.other-nav-list:nth-child(1) li:nth-child(2) .picture {
+    background-position: -48px 0;
+}
+.other-nav-list:nth-child(1) li:nth-child(3) .picture {
+    background-position: -96px 0;
+}
+.other-nav-list:nth-child(1) li:nth-child(4) .picture {
+    background-position: -144px 0;
+}
+/* 第二行 */
+.other-nav-list:nth-child(2) li:nth-child(1) .picture {
+    background-position: 0 -48px;
+}
+.other-nav-list:nth-child(2) li:nth-child(2) .picture {
+    background-position: -48px -48px;
+}
+.other-nav-list:nth-child(2) li:nth-child(3) .picture {
+    background-position: -96px -48px;
+}
+.other-nav-list:nth-child(2) li:nth-child(4) .picture {
+    background-position: -144px -48px;
+}
+/* 第三行 */
+.other-nav-list:nth-child(3) li:nth-child(1) .picture {
+    background-position: 0 -96px;
+}
+.other-nav-list:nth-child(3) li:nth-child(2) .picture {
+    background-position: -48px -96px;
+}
+.other-nav-list:nth-child(3) li:nth-child(3) .picture {
+    background-position: -96px -96px;
+}
+.other-nav-list:nth-child(3) li:nth-child(4) .picture {
+    background-position: -144px -96px;
+}
+/* #endregion内容区右边end */
+
+
+/* #region秒杀start */
+.seckill {
+    margin-top: 10px;
+}
+.seckill img {
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.seckill img:last-child {
+    margin-right: 0;
+}
+/* #endregion秒杀end */
+
+/* #region楼层start */
+.floor {
+    margin-top: 48px;
+
+}
+.floor-nav {
+    height: 30px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #dd302d;
+    line-height: 30px;
+}
+.floor-name {
+    font-size: 20px;
+}
+.floor-nav-list li {
+    float: left;
+    font-size: 14px;
+}
+
+.floor-nav-list li a {
+    padding: 0 10px;
+    border-right: 1px solid #666;
+}
+.floor-nav-list li:first-child a {
+    padding-left: 0px;
+}
+.floor-nav-list li:last-child a {
+    padding-right: 0px;
+    border-right: 0px;
+}
+.floor-info .item {
+    float: left;
+}
+.floor-info .item1 {
+    width: 230px;
+    height: 432px;
+    background-color: green;
+}
+.floor-info .item2 {
+    width: 340px;
+    height: 432px;
+    background-color: orange;
+}
+.floor-info .item3 {
+    width: 206px;
+    height: 432px;
+    border-right: 1px solid #E2E2E2;
+    background-color: gray;
+}
+.floor-info .item4 {
+    width: 206px;
+    height: 432px;
+    border-right: 1px solid #E2E2E2;
+    background-color: tomato;
+}
+.floor-info .item5 {
+    width: 206px;
+    height: 432px;
+    background-color: skyblue;
+}
+/* #endregion楼层end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
