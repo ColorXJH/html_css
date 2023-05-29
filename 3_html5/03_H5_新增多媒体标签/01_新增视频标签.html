@@ -5,6 +5,12 @@
     <title>新增视频标签</title>
 </head>
 <body>
-    <video src="./小电影.mp4" width="600px" controls></video>
+    <!-- 静音状态下才能自动播放 -->
+    <video src="./小电影.mp4" width="600px" controls muted autoplay loop></video>
+    <!-- 指定视频封面 先要取消自动播放 -->
+    <video src="./小电影.mp4" width="600px" controls muted  loop poster="./封面.png"></video>
+    <!-- 视频预加载 -->
+    <video src="./小电影.mp4" width="600px" controls muted  loop poster="./封面.png" preload="auto"></video>
+
 </body>
 </html>
