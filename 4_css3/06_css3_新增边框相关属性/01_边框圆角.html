@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>边框圆角</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            border: 2px solid black;
+            margin: 0 auto;
+            /* 这个值是圆角对应圆的半径 */
+            /* border-radius: 10px; */
+            /* 以下不常用 */
+            /* 左上角，反过来写：上-左-角 */
+            /* border-top-left-radius: 100px;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 10px; */
+
+            /* 以下：更不常见  100px指的是x轴的半径 50px指的是y轴的半径*/
+            /* border-top-left-radius: 100px 50px;
+            border-top-right-radius: 50px 20px;
+            border-bottom-right-radius: 20px 10px;
+            border-bottom-left-radius: 10px 5px; */
+            
+            /* 合并编写：顺序：左上，右上，右下，左下 先写x轴，再斜杠 /y轴*/
+            border-radius: 100px 50px  20px 10px / 50px 20px 10px 5px;
+
+
+
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>background-origin:背景图的源点</title>
+    <style>
+        .box1 {
+            height: 400px;
+            width: 400px;
+            background-color: skyblue;
+            margin: 0 auto;
+            font-size: 40px;
+            padding: 50px;
+            border: 50px dashed black;
+            background-image: url('./bg01.jpg');
+            background-repeat: no-repeat;
+            /* 默认图片参考padding的左上角铺图片：padding-box ,content-box表示从内容的左顶点开始普，border-box表示从边框的左顶点开始铺*/
+            background-origin: content-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">你好啊</div>
+</body>
+</html>

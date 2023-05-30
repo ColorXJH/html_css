@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+            background-image: url('./bg03.jpg');
+            /* 1:写像素值 */
+            /* background-size: 400px 400px; */
+            /* 2:写百分比:可能有比例问题 */
+            /* background-size: 100% 100%; */
+            /* 3:contain 等比例缩放，重复填充 */
+            /* background-size: contain; */
+            /* 去掉重复 */
+            background-repeat: no-repeat;
+            /* cover：尽可能完整的展示，等比例缩放，以最短的为例，但是不会产生空白，默认auto */
+
+            background-size:cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>
