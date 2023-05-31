@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>web字体</title>
+    <style>
+        @font-face {
+            font-family: "哈哈哈嘻嘻嘻";
+            /* 也可以上服务器地址 */
+            src: url('./font1/方正手迹.ttf');
+        }
+        @font-face {
+            font-family: "colorxjh";
+            font-display: swap;
+            src: url('./font2/webfont.eot'); /* IE9 */
+            src: url('./font2/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('./font2/webfont.woff2') format('woff2'),
+            url('./font2/webfont.woff') format('woff'), /* chrome、firefox */
+            url('./font2/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+            url('./font2/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+        }
+        h1 {
+            font-size: 100px;
+            font-family: '哈哈哈嘻嘻嘻';
+        }
+        h2 {
+            font-size: 100px;
+            font-family: 'colorxjh';   
+        }
+    </style>
+</head>
+<body>
+    <!-- 对于字体库太大，可以考虑定制字体，只针对这几个字体设计库，推荐https://www.iconfont.cn/webfont 阿里在线定制web字体 -->
+    <h1>春风得意马蹄疾，不信人间有别离</h1>
+    <h2>春风得意马蹄疾，不信人间有别离</h2>
+</body>
+</html>

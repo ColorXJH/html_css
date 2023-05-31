@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>线性渐变</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+            float: left;
+            margin-left: 50px;
+            font-size: 40px;
+        }
+        .box1 {
+            /* 线性渐变 默认向下渐变*/
+            background-image: linear-gradient(red,yellow,green);
+        }
+        .box2 {
+            /* 线性渐变 往右去 向右渐变 to right top 右上角*/
+            background-image: linear-gradient(to right top,red,yellow,green);
+        }
+        .box3 {
+            /* 线性渐变 使用角度改变方向 与水平方向的夹角*/
+            background-image: linear-gradient(20deg,red,yellow,green);
+        }
+        .box4 {
+            /* 线性渐变 50px线必须是纯红，100必须是纯黄，150纯绿色，之间的颜色会线性渐变*/
+            background-image: linear-gradient(red 50px,yellow 100px,green 150px);
+        }
+        .box5 {
+            /* 线性渐变 前面是角度，50px线必须是纯红，100必须是纯黄，150纯绿色，之间的颜色会线性渐变*/
+            background-image: linear-gradient(20deg,red 50px,yellow 100px,green 150px);
+            color: transparent;
+            font-size: 100px;
+            text-align: center;
+            line-height: 200px;
+            /* 颜色只呈现在文字上 */
+            -webkit-background-clip: text;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">1:默认从上到下</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+    <div class="box box5">你好啊</div>
+</body>
+</html>

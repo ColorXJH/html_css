@@ -15,19 +15,22 @@
         }
         li {
             margin-bottom: 10px;
-            
+            white-space: nowrap;
+            /* 控制文本溢出的 clip：超出部分截断，配合overflow:hidden使用,ellipsis:超出部分三个点...*/
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
     </style>
 </head>
 <body>
     <ul>
-        <li>xxxxxxxxxx</li>
-        <li>xxxxxxxxxx</li>
-        <li>xxxxxxxxxx</li>
-        <li>xxxxxxxxxx</li>
-        <li>xxxxxxxxxx</li>
-        <li>xxxxxxxxxx</li>
-        <li>xxxxxxxxxx</li>
+        <li>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+        <li>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+        <li>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+        <li>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+        <li>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+        <li>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+        <li>xxxxxxxxxxxxxxxxxxxx</li>
     </ul>
 </body>
 </html>

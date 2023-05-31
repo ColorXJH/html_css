@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>重复渐变</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+            float: left;
+            margin-left: 50px;
+            margin-top: 50px;
+            font-size: 40px;
+        }
+        /* 重复：在没有发生渐变的区域，重新开始渐变就是重复渐变，之所以盒子123没有效果是因为：这三个盒子都有发生渐变区域
+            盒子4一开始是有上下两部分红，绿的纯色，就产生了渐变，盒子5也是调整了渐变的区域
+        */
+        .box1 {
+            /* 重复渐变 默认向下渐变*/
+            background-image: repeating-linear-gradient(red,yellow,green);
+        }
+        .box2 {
+            /* 重复渐变 往右去 向右渐变 to right top 右上角*/
+            background-image: repeating-linear-gradient(to right top,red,yellow,green);
+        }
+        .box3 {
+            /* 重复渐变 使用角度改变方向 与水平方向的夹角*/
+            background-image: repeating-linear-gradient(20deg,red,yellow,green);
+        }
+        .box4 {
+            /* 重复渐变 50px线必须是纯红，100必须是纯黄，150纯绿色，之间的颜色会线性渐变*/
+            background-image: repeating-linear-gradient(red 50px,yellow 100px,green 150px);
+        }
+        .box5 {
+            /* 重复渐变 前面是角度，50px线必须是纯红，100必须是纯黄，150纯绿色，之间的颜色会线性渐变*/
+            background-image: repeating-linear-gradient(20deg,red 50px,yellow 100px,green 150px);
+            color: transparent;
+            font-size: 100px;
+            text-align: center;
+            line-height: 200px;
+            /* 颜色只呈现在文字上 */
+            -webkit-background-clip: text;
+        }
+        .box6 {
+            /* 径向渐变  通过像素 调整不同颜色椭圆的半径大小*/
+            background-image: repeating-radial-gradient(red 50px,yellow 100px,green 150px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">1:默认从上到下</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+    <div class="box box5">你好啊</div>
+    <div class="box box6">你好啊6</div>
+</body>
+</html>
