@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>位移</title>
+    <style>
+        .outer {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 0 auto;
+            margin-top: 100px;
+            position: relative;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: deepskyblue;
+            /* 变换 以左上角为原点,位移的百分比是自身 不会脱离文档流*/
+            transform: translateX(50px) translateY(100px);
+            /* transform: translate(50px,50px); */
+        }
+        .inner2 {
+            height: 60px;
+            width: 60px;
+            background-color: orange;
+            /* 居中 */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* margin-top: -30px;
+            margin-left: -30px; */
+            /* 同样可以设置水平垂直居中 */
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <!-- 2D xy x向右，y向下 -->
+    <div class="outer">
+        <div class="inner">
+            你好啊
+        </div>
+    </div>
+    <div class="outer">
+        <div class="inner2">
+            你好啊
+        </div>
+    </div>
+</body>
+</html>

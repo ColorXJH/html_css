@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>变换原点</title>
+    <style>
+        .outer {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: deepskyblue;
+            /* 需求：先缩放 再位移， 坐标系原点在缩放之前，然后再位移*/
+            /* transform: scale(0.5) translate(100px,100px) ; */
+            /* 需求：先位移，再旋转  一般把具有破坏性的动作：旋转（破坏坐标系）放在最后操作*/
+            transform: translate(100px,100px) rotate(30deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- 2D xy x向右，y向下 -->
+    <div class="outer">
+        <div class="inner">
+            你好啊
+        </div>
+    </div>
+</body>
+</html>

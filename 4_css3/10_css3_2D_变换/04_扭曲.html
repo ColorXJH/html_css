@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>扭曲</title>
+    <style>
+        .outer {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: deepskyblue;
+            /* 该属性不能应用在行内元素上 */
+            /* 给一个角度 */
+            /* transform: skewX(30deg) skewY(30deg); */
+            transform: skew(30deg,30deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- 2D xy x向右，y向下 -->
+    <div class="outer">
+        <div class="inner">
+            你好啊
+        </div>
+    </div>
+</body>
+</html>
