@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>3d空间与景深</title>
+    <title>位移</title>
     <style>
         .outer {
             width: 200px;
@@ -14,12 +14,17 @@
             transform-style: preserve-3d;
             /* 设置景深（指的是人眼距离Z轴的距离）（有了透视效果：近大远小），一般设置景深为元素高度一半的几倍，不允许为负值 */
             perspective: 500px;
+            /* 设置透视点，默认在父元素的中心位置 */
+            perspective-origin: 200px 102px;
         }
         .inner {
             width: 200px;
             height: 200px;
-            background-color: deepskyblue;
-            transform: rotateX(30deg);
+            background-color: rgba(0, 191, 255, 0.703);
+            /* 从z轴朝着你过来，远小近大  500的时候就看不见了，因为景深也是500，相当于视角到眼睛这里，眼睛看不到耳朵的概念 */
+            /* transform: translateZ(100px); */
+            transform: translate3d(100px,100px,200px);
+            box-shadow: 0px 0px 10px black;
         }
     </style>
 </head>

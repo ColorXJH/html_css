@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>多重变换</title>
+    <style>
+        .outer {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 0 auto;
+            margin-top: 100px;
+            /* 父元素开启3D空间 */
+            transform-style: preserve-3d;
+            /* 设置景深（指的是人眼距离Z轴的距离）（有了透视效果：近大远小），一般设置景深为元素高度一半的几倍，不允许为负值 */
+            perspective: 500px;
+            /* 设置透视点，默认在父元素的中心位置 */
+            perspective-origin: 102px 102px;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;  
+            background-color: rgba(0, 191, 255, 0.703);
+            /* transform: rotateY(45deg); */
+            /* 上 中 下：top center bottom */
+            /* transform-origin: left; */
+            /* 与上面等价 */
+            /* transform-origin: 0px; */
+            /* transform-origin: 0 top; */
+            /* transform: rotateX(45deg); */
+            /* 多重变换:复合在一起：位移 缩放 旋转，一般把rotateY(45deg)这种有破坏性的操作放在最后，因为它改变了坐标系*/
+            transform: translateZ(100px) scaleZ(3) rotateY(45deg);
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            你好啊
+        </div>
+    </div>
+</body>
+</html>
