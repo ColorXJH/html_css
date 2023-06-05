@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>动画小案例</title>
+    <style>
+        div {
+            width: 130px;
+            height: 130px;
+            background-image: url("./bike.png");
+            margin: 0 auto;
+            margin-top: 100px;
+            /* 32幅画，要步进31次，一直循环往复，无限 */
+            animation: bike 1s steps(31) infinite;
+        }
+        @keyframes bike {
+            from{}
+            to{
+                background-position: 0px -4030px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
