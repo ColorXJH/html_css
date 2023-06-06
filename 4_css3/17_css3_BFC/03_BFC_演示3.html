@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>bfc-演示3</title>
+    <style>
+        .outer {
+            width: 400px;
+            background-color: #888;
+            /* 解决方式1,2,3...以下手段开启bfc，解决margin塌陷问题 */
+            /* 以浮治浮，父元素浮动，导致后面元素会顶上去 */
+            /* float: left; */
+            /* 脱离文档流 */
+            /* position: absolute; */
+            /* 中间有小缝隙 */
+            /* display: inline-block; */
+            /* 展示方式改变了 */
+            /* display: table; */
+            /* 可能有其他影响 */
+            /* overflow: hidden; */
+            /* 影响列格式 */
+            /* column-count: 1; */
+            /* 影响最低，副作用最少，ie浏览器可能不支持 */
+            /* display: flow-root; */
+        }
+        .inner {
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        .inner1 {
+            background-color: orange;
+        }
+        .inner2 {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner inner1"></div>
+        <div class="inner inner2"></div>
+    </div>
+</body>
+</html>

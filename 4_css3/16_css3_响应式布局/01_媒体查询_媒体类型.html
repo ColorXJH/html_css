@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>01_媒体查询_媒体类型</title>
+    <style>
+        h1 {
+            width: 600px;
+            height: 400px;
+            background-image: linear-gradient(30deg,red,yellow,green);
+            margin: 0 auto;
+            line-height: 400px;
+            font-size: 100px;
+            text-align: center;
+            color: white;
+            text-shadow: 0 0 10px black;
+        }
+        /* 只有在打印机或打印预览才会应用该样式 */
+        /* 媒体查询  print:打印机*/
+        @media print {
+            h1 {
+                background: transparent;
+            }
+        }
+        /* 只有在屏幕上才会应用该样式 */
+        /* 媒体查询  print:打印机*/
+        @media screen {
+            h1 {
+                font-family: '宋体';
+            }
+        }
+        /* 一直都应用的样式 */
+        @media all {
+            h1 {
+                color:red
+            }
+        }
+        /* 媒体查询没有优先级，只有先后顺序，一般玩媒体查询，先写正常样式，在写媒体样式，不然还是会被覆盖掉 */
+    </style>
+</head>
+<body>
+    <h1>新年好</h1>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>bfc_演示1</title>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+         }
+        .outer {
+            width: 400px;
+            background-color: #888;
+            /* 解决方式1,2,3...以下手段开启bfc，解决margin塌陷问题 */
+            /* float: left; */
+            /* position: absolute; */
+            /* display: inline-block; */
+            /* display: table; */
+            /* overflow: hidden; */
+            /* column-count: 1; */
+            /* display: flow-root; */
+            /* 以下没开启bfc，只是解决了margin塌陷问题， */
+            /* border: 1px solid black; */
+
+        }
+        /* body {
+            display: flex;
+        } */
+        .inner {
+            width: 100px;
+            height: 100px;
+            /* margin塌陷 */
+            margin: 20px;
+        }
+        .inner1 {
+            background-color: orange;
+        }
+        .inner2 {
+            background-color: green;
+        }
+        .inner3 {
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner inner1"></div>
+        <div class="inner inner2"></div>
+        <div class="inner inner3"></div>
+    </div>
+    <hr style="height: 50px;background-color: red;">
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>11_伸缩项目_缩</title>
+    <style>
+        .outer {
+            width: 699px;
+            height: 900px;
+            background-color: #888;
+            margin: 0 auto;
+
+            /* 伸缩盒模型相关 */
+
+            /* 将该元素变成了伸缩容器（开启了flex布局） */
+            display: flex;
+            /* 主轴默认 */
+            flex-direction: row;
+            /* flex-wrap: wrap; */
+            align-content: flex-start;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            border: 1px solid black;
+            box-sizing: border-box;
+            /* 弹性增长，按比例分配，默认主轴不拉伸0 */
+            flex-grow: 1;
+            /* 弹性压缩  比例按照自身比例缩小*/
+            /* 同伸异缩，缩小按比例，为了维持布局 */
+            flex-shrink: 1;
+
+        }
+        .inner2 {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner inner1">1</div>
+        <div class="inner inner2">2</div>
+        <div class="inner inner3">3</div>
+    </div>
+</body>
+</html>

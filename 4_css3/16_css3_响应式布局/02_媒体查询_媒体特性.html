@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>媒体查询_媒体特性</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            height: 200px;
+            background-color: gray;
+            text-align: center;
+            line-height: 200px;
+            font-size: 100px;
+        }
+        /* 检测到视口宽度为800px时，应用该样式 */
+        @media (width:800px) {
+            h1 {
+                background-color: green;
+            }
+        }
+        /* 小于等于700px时应用该样式 */
+        @media (max-width:700px) {
+            h1 {
+                background-color: pink;
+            }
+        }
+        /* 大于等于700px时应用该样式 */
+        @media (min-width:900px) {
+            h1 {
+                background-color: purple;
+            }
+        }
+        /* 高度 */
+        @media (height:800px) {
+            h1 {
+                background-color: yellow;
+            }
+        }
+        /* 设备宽度(和显示器的缩放有关) */
+        @media (device-width:1280px) {
+            h1 {
+                background-color: deeppink;
+                color:black
+            }
+        }
+        /* 写媒体查询要考虑到覆盖，后写的会覆盖先写的 */
+    </style>
+</head>
+<body>
+    <h1>你好啊</h1>
+</body>
+</html>

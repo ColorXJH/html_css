@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>bfc-演示2</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+        .box1 {
+            background-color:orange;
+            float: left;
+        }
+        .box2 {
+            background-color:green;
+            /* 解决方式1,2,3...以下手段开启bfc，解决margin塌陷问题 */
+            /* float: left; */
+            /* position: absolute; */
+            /* display: inline-block; */
+            /* display: table; */
+            /* overflow: hidden; */
+            /* column-count: 1; */
+            /* display: flow-root; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+</body>
+</html>

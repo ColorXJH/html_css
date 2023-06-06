@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>03_媒体查询_运算符</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            height: 200px;
+            background-color: gray;
+            text-align: center;
+            line-height: 200px;
+            font-size: 100px;
+        }
+        /* 多条件组合  且*/
+        @media (min-width:700px) and (max-width:800px) {
+            h1 {
+                background-color: orange;
+            }
+        }
+        /* 多条件组合  屏幕且条件组合*/
+        /* @media screen and (min-width:700px) and (max-width:800px) {
+            h1 {
+                background-color: orange;
+            }
+        } */
+        /* 多条件组合  或条件组合 , or都可以*/
+        @media screen and  (max-width:700px) or (min-width:800px) {
+            h1 {
+                background-color: pink;
+            }
+        }
+        /* 多条件组合  否定运算符*/
+        @media not screen {
+            h1 {
+                background-color: red;
+            }
+        }
+        /* 肯定运算符 处理ie兼容问题（only ie不认，不至于乱了样式），和不写一个意思*/
+        @media only screen {
+            h1 {
+                background-color: deepskyblue;
+            }
+        }
+        /* 写媒体查询要考虑到覆盖，后写的会覆盖先写的 */
+    </style>
+</head>
+<body>
+    <h1>你好啊</h1>
+</body>
+</html>
